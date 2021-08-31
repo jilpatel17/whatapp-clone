@@ -68,9 +68,9 @@
     var room_id;
     var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
     var local_stream;
-    $('#emoji').emojioneArea({
-			pickerPosition:'right'
-		});
+//     $('#emoji').emojioneArea({
+// 			pickerPosition:'right'
+// 		});
     function fetchCall(){
       $.ajax({
         url:'fetch.php',
