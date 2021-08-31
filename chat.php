@@ -14,7 +14,7 @@
     
       <div class="meet-area">
           <!-- Remote Video Element-->
-          <video id="remote-video" width="450px"></video>
+          <video id="remote-video" style="width:100%"></video>
 
           <!-- Local Video Element-->
           <video id="local-video" width="150px" height="150px"></video>
