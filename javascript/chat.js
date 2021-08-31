@@ -13,6 +13,7 @@ chatBox = document.querySelector(".chat-box");
         data:{calling_id:calling_id},
         success:function(data){
           console.log(data);
+         location.reload();
         }
       });
       
