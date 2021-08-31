@@ -133,7 +133,19 @@
                     }
     });
 
-    
+      $(document).on("click","#declinecall",function(){
+      var calling_id = $(this).data('id');
+      $.ajax({
+        url:'deletecall.php',
+        method:'POST',
+        data:{calling_id:calling_id},
+        success:function(data){
+          console.log(data);
+        }
+      });
+      
+      
+    }
 
 
   function videocall(){
@@ -189,19 +201,7 @@
     });
 
 
-        $(document).on("click","#declinecall",function(){
-      var calling_id = $(this).data('id');
-      $.ajax({
-        url:'deletecall.php',
-        method:'POST',
-        data:{calling_id:calling_id},
-        success:function(data){
-          console.log(data);
-        }
-      });
-      
-      
-    }
+     
     
   }
 
