@@ -66,6 +66,19 @@
     var room_id;
     var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
     var local_stream;
+     $(document).on("click","#declinecall",function(){
+      var calling_id = $(this).data('id');
+      $.ajax({
+        url:'deletecall.php',
+        method:'POST',
+        data:{calling_id:calling_id},
+        success:function(data){
+          console.log(data);
+        }
+      });
+      
+      
+    }
     function fetchCall(){
       $.ajax({
         url:'fetch.php',
@@ -132,20 +145,6 @@
                         video.play();
                     }
     });
-
-      $(document).on("click","#declinecall",function(){
-      var calling_id = $(this).data('id');
-      $.ajax({
-        url:'deletecall.php',
-        method:'POST',
-        data:{calling_id:calling_id},
-        success:function(data){
-          console.log(data);
-        }
-      });
-      
-      
-    }
 
 
   function videocall(){
