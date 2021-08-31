@@ -71,10 +71,13 @@
         url:'fetch.php',
         method:'GET',
         success:function(data){
-          
+          if(data!="not fetch")
+          {
+            
           var output = `<button id='acceptcall' data-id=${data}>accept</button>`;
             $('#alert').html(output);
             $('#alert').css("display",'block');
+          }
         }
       });
     }
