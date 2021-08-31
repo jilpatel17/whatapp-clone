@@ -88,19 +88,7 @@
       fetchCall();
     },1000);
   
-//     $(document).on("click","#declinecall",function(){
-//       var calling_id = $(this).data('id');
-//       $.ajax({
-//         url:'deletecall.php',
-//         method:'POST',
-//         data:{calling_id:calling_id},
-//         success:function(data){
-//           console.log(data);
-//         }
-//       });
-      
-      
-//     }
+
 
     $(document).on("click","#acceptcall",function(){
       
@@ -201,7 +189,19 @@
     });
 
 
-    
+        $(document).on("click","#declinecall",function(){
+      var calling_id = $(this).data('id');
+      $.ajax({
+        url:'deletecall.php',
+        method:'POST',
+        data:{calling_id:calling_id},
+        success:function(data){
+          console.log(data);
+        }
+      });
+      
+      
+    }
     
   }
 
