@@ -17,7 +17,7 @@ chatBox = document.querySelector(".chat-box");
       });
       
       
-    }
+    });
 
 
 form.onsubmit = (e)=>{
