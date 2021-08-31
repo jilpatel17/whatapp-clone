@@ -49,8 +49,8 @@
       </div>
       <form action="#" class="typing-area">
         <input type="text" class="incoming_id" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
-<!--         <input type="text" name="message" class="input-field" placeholder="Type a message here..." autocomplete="off"> -->
-        <textarea id="emoji" name="message" class="input-field" placeholder="Type your message here..."></textarea>
+        <input type="text" name="message" class="input-field" placeholder="Type a message here..." autocomplete="off">
+<!--         <textarea id="emoji" name="message" class="input-field" placeholder="Type your message here..."></textarea> -->
         <button><i class="fab fa-telegram-plane"></i></button>
       </form>
     </section>
