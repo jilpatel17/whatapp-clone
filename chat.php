@@ -49,8 +49,8 @@
       </div>
       <form action="#" class="typing-area">
         <input type="text" class="incoming_id" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
-        <input type="text" name="message" class="input-field" placeholder="Type a message here..." autocomplete="off">
-<!--         <textarea id="emoji" name="message" class="input-field" placeholder="Type your message here..."></textarea> -->
+<!--         <input type="text" name="message" class="input-field" placeholder="Type a message here..." autocomplete="off"> -->
+        <textarea id="emoji" name="message" class="input-field" placeholder="Type your message here..."></textarea>
         <button><i class="fab fa-telegram-plane"></i></button>
       </form>
     </section>
@@ -58,7 +58,8 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.js" integrity="sha512-hkvXFLlESjeYENO4CNi69z3A1puvONQV5Uh+G4TUDayZxSLyic5Kba9hhuiNLbHqdnKNMk2PxXKm0v7KDnWkYA==" crossorigin="anonymous"></script>
+	
   <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
   <script src="javascript/chat.js"></script>
 <script>
@@ -67,7 +68,9 @@
     var room_id;
     var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
     var local_stream;
-    
+    $('#emoji').emojioneArea({
+			pickerPosition:'right'
+		});
     function fetchCall(){
       $.ajax({
         url:'fetch.php',
