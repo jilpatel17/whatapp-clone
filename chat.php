@@ -74,7 +74,8 @@
           if(data!="not fetch")
           {
             
-          var output = `<button id='acceptcall' style='border-radius:50%;background-color:purple;color:white;padding:3px 6px;border:none' data-id=${data}><i class='fas fa-phone 2x'></i></button>`;
+          var output = `<button id='acceptcall' style='border-radius:50%;background-color:purple;color:white;padding:3px 6px;border:none' data-id=${data}><i class='fas fa-phone 2x'></i></button>
+          <button id='declinecall' style='border-radius:50%;background-color:red;color:white;padding:3px 6px;border:none' data-id=${data}><i class='fas fa-phone-slash 2x'></i></button>`;
             $('#alert').html(output);
             $('#alert').css("display",'block');
           }
